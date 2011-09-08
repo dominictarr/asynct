@@ -1,12 +1,12 @@
 { "name": "asynct"
-, "version": "1.0.0"
-, "description": ""
+, "version": "1.0.1"
+, "description": "simple asyncronous test runner"
 , "homepage": "http://github.com/dominictarr/asynct"
 , "repository": 
   { "type": "git"
   , "url": "https://github.com/dominictarr/asynct.git" }
 , "dependencies": {
-    "ctrlflow": ">=0.0.3"
+    "ctrlflow": "0.0.3"
   , "test-cmd": "1"
   }
 , "main": "./asynct.js"
