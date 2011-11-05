@@ -1,5 +1,5 @@
 { "name": "asynct"
-, "version": "1.0.1"
+, "version": "1.0.2"
 , "description": "simple asyncronous test runner"
 , "homepage": "http://github.com/dominictarr/asynct"
 , "repository": 

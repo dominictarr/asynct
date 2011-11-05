@@ -19,9 +19,9 @@ exports.run = function (tests,reporter,callback) {
     var status = {}
     var setup = [], teardown = []
     var names = Object.keys(tests).filter(function (name){
-      if(isSetup(name))
+      if(isSetup.test(name))
         setup.push(name)
-      else if (isTeardown(name))
+      else if (isTeardown.test(name))
         teardown.push(name)
       else return true
     })
@@ -35,7 +35,7 @@ exports.run = function (tests,reporter,callback) {
         var __next = this.next
           , finishAlready = false
 
-        if(!isSetupTeardown(name)) //don't report setup and teardown unless there is an error.
+        if(!isSetupTeardown.test(name)) //don't report setup and teardown unless there is an error.
           reporter.test(name)
         
         function next (){
@@ -73,7 +73,7 @@ exports.run = function (tests,reporter,callback) {
           try{ 
             status[name] = 'started'
             test.call(null,tester) 
-            if(isTeardown(name))
+            if(isTeardown.test(name))
               next()//teardown is sync! .. 
             //on second thoughts this is probably not a good idea.
             //maybe, by hooking process.nextTick and the events you could have an 
