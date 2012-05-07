@@ -106,6 +106,7 @@ Tester.prototype = assert
 function Tester (name, next, handler) {
   this.done = next
   this.finish = next
+  this.end = next
   this.name = name
   this.catch = null
   this.failure = handler
